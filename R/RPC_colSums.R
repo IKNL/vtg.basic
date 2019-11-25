@@ -11,7 +11,7 @@ RPC_colSums <- function(df, expl_vars) {
     # sum(S): total number of occurrences across bins; this should correspond
     # to the number of rows, since the chi2 should be run against a single
     # variable.
-    return(colSums(df[expl_vars]))
+    return(base::colSums(df[expl_vars]))
 }
 
 

@@ -1,4 +1,4 @@
-colSums <- function(client, vars) {
+colSums <- function(client, expl_vars) {
     writeln("Retrieving colSums")
     image.name <- "harbor.distributedlearning.ai/vantage/vantage.basic:test"
 
@@ -7,7 +7,7 @@ colSums <- function(client, vars) {
         task.name="colSums"
     )
 
-    colsums <- client$call("colSums", vars)
+    colsums <- client$call("colSums", expl_vars)
     result <- c()
 
     for (item in colsums) {

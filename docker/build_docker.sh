@@ -19,10 +19,10 @@ docker build -t custom-r-base -f Dockerfile.custom-r-base .
 
 if [ $PORT -eq 443 ]
 then
-    docker build -t $IMAGE:$TAG -t $HOST/$IMAGE:$TAG .
+    docker build --no-cache -t $IMAGE:$TAG -t $HOST/$IMAGE:$TAG .
     docker push $HOST/$IMAGE:$TAG
 else
-    docker build -t $IMAGE:$TAG -t $HOST:$PORT/$IMAGE:$TAG .
+    docker build --no-cache -t $IMAGE:$TAG -t $HOST:$PORT/$IMAGE:$TAG .
     docker push $HOST:$PORT/$IMAGE:$TAG
 fi
 

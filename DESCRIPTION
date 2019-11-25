@@ -12,7 +12,6 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports:
-    import,
     vantage.infrastructure
 Remotes: 
     mellesies/vantage.infrastructure
