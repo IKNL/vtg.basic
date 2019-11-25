@@ -1,0 +1,18 @@
+Package: vantage.basic
+Type: Package
+Title: Basic Algorithms for the Vantage Infrastructure
+Version: 0.1.0
+Author: 
+    Frank Martin <f.martin@iknl.nl>, 
+    Gijs Geleijnse <g.geleijnse@iknl.nl>, 
+    Melle Sieswerda <m.sieswerda@iknl.nl>
+Maintainer: Melle Sieswerda <m.sieswerda@iknl.nl>
+Description: 
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    import,
+    vantage.infrastructure
+Remotes: 
+    mellesies/vantage.infrastructure
