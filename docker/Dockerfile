@@ -9,19 +9,15 @@ LABEL maintainer="Melle Sieswerda <m.sieswerda@iknl.nl>"
 # Install R package from github
 # COPY docker/install_packages.R /app
 # RUN Rscript install_packages.R
-
 COPY src /usr/local/R/vantage.basic/
 WORKDIR /usr/local/R/vantage.basic
 RUN Rscript -e 'library(devtools)' -e 'install_deps(".")'
 RUN R CMD INSTALL --no-multiarch --with-keep.source .
 
 
-# Change directory to '/app’. This means the subsequent ‘RUN’ steps will
-# execute in this directory.
+# Change directory to '/app’ and create files that will be
+# used to mount input, output and database.
 WORKDIR /app
-
-
-# Create two files that will later serve for input/output
 RUN touch input.txt
 RUN touch output.txt
 RUN touch database

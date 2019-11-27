@@ -22,7 +22,7 @@ docker push $HOST/$IMAGE:$TAG
 # This only works on macOS
 if [ -x "$(command -v osascript)" ]
 then
-    NOTIFICATION_TXT='Docker build finished'
+    NOTIFICATION_TXT="docker build of '$IMAGE' finished"
     NOTIFICATION_TITLE='Docker'
     osascript << EOF
     display notification "$NOTIFICATION_TXT"¬
