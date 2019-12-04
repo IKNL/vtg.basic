@@ -21,9 +21,9 @@ colSums <- function(client, expl_vars) {
 
     for (k in 1:length(sites)) {
         if (k == 1) {
-            result <- sites[[k]]$result
+            result <- sites[[k]]
         } else {
-            result <- rbind(result, sites[[k]]$result)
+            result <- rbind(result, sites[[k]])
         }
     }
 
