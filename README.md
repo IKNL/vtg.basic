@@ -15,9 +15,6 @@ devtools::install_github('mellesies/vtg.basic', subdir='src')
 
 ## Example use
 ```R
-# Load the package
-library(vtg.basic)
-
 # Function to create a client
 setup.client <- function() {
   # Define parameters
@@ -36,4 +33,8 @@ setup.client <- function() {
 
 # Create a client
 client <- setup.client()
+
+# Since vtg.basic exports function names that collide with built-in functions, 
+# it's probably better to not attach the package, but call functions with a prefix instead. 
+vtg.basic::colnames(client)
 ```
