@@ -1,5 +1,7 @@
 # vtg.basic
 
-Contains basic functions to run on the Vantage6 infrastructure:
+Basic Algorithms for the Vantage6 Infrastructure.
+
+Contains the following algorithms:
 * colSums
 * colnames
