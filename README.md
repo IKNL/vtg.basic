@@ -28,7 +28,7 @@ setup.client <- function() {
   api_path <- ''
   
   # Create the client
-  client <- vantage.infrastructure::Client(host, username, password, collaboration_id, api_path)
+  client <- vtg::Client(host, username, password, collaboration_id, api_path)
   client$authenticate()
 
   return(client)
