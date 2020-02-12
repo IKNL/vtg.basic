@@ -9,7 +9,7 @@ ARG PKG_NAME='algorithm'
 
 LABEL maintainer="Melle Sieswerda <m.sieswerda@iknl.nl>"
 
-# Install federated chisq package
+# Install federated package
 COPY src /usr/local/R/${PKG_NAME}/
 WORKDIR /usr/local/R/${PKG_NAME}
 RUN Rscript -e 'library(devtools)' -e 'install_deps(".")'
@@ -24,5 +24,5 @@ RUN touch database
 
 # Tell docker to execute `docker.wrapper()` when the image is run.
 ENV PKG_NAME=${PKG_NAME}
-CMD Rscript -e "vtg::docker.wrapper('$PKG_NAME')
+CMD Rscript -e "vtg::docker.wrapper('$PKG_NAME')"
 

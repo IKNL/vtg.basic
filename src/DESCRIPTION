@@ -1,6 +1,6 @@
 Package: vtg.basic
 Type: Package
-Title: Basic Algorithms for the Vantage Infrastructure
+Title: Basic Algorithms for the Vantage6 Infrastructure
 Version: 0.1.0
 Author: 
     Frank Martin <f.martin@iknl.nl>, 
