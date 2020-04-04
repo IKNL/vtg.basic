@@ -9,7 +9,7 @@
 #' @examples
 colnames <- function(client) {
     writeln("Retrieving column names")
-    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:test"
+    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:trolltunga"
 
     client$set.task.image(
         image.name,
