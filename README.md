@@ -17,8 +17,7 @@ devtools::install_github('IKNL/vtg.basic', subdir='src')
 ```R
 # Function to create a client
 setup.client <- function() {
-  # Username/password should be provided by the administrator of
-  # the server.
+  # Username/password should be provided by the administrator of the server.
   username <- "username@example.com"
   password <- "password"
   
