@@ -2,7 +2,7 @@
 HOST='harbor.distributedlearning.ai'
 PKG_NAME=${PWD##*/}
 IMAGE="vantage/$PKG_NAME"
-TAG='test'
+TAG='trolltunga'
 
 echo "************************************************************************"
 echo "* Building image '$IMAGE:$TAG' "

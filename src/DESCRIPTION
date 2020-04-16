@@ -14,5 +14,5 @@ LazyData: true
 Imports:
     vtg
 Remotes: 
-    mellesies/vtg
+    mellesies/vtg@trolltunga
 RoxygenNote: 7.0.2

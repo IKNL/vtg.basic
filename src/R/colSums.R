@@ -9,7 +9,7 @@
 #' @examples
 colSums <- function(client, expl_vars) {
     writeln("Retrieving colSums")
-    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:test"
+    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:trolltunga"
 
     client$set.task.image(
         image.name,
