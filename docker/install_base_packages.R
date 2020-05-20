@@ -3,8 +3,11 @@ packages <- c(
     "rjson",
     "dplyr",
     "namespace",
-    "devtools"
+    "devtools",
+    "lgr",
+    "base64enc"
 )
 
 install.packages(packages)
+devtools::install_github('mellesies/vtg')
 

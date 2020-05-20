@@ -1,6 +1,6 @@
 #' Return column names.
 #'
-#' @param client Instance of \code{vantage.infrastructure::Client}
+#' @param client Instance of \code{vtg::Client}
 #' @param expl_vars \code{Character} vector of variables to include
 #'
 #' @return \code{data.frame} with one row for each site.
@@ -8,15 +8,13 @@
 #'
 #' @examples
 colnames <- function(client) {
-    writeln("Retrieving column names")
-    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:trolltunga"
+    log$debug("Retrieving column names")
 
-    client$set.task.image(
-        image.name,
-        task.name="colnames"
-    )
+    image.name <- get.option('image.name')
+    log$debug("Using image: '{image.name}'")
 
+    client$set.task.image(image.name, task.name="colnames")
     result <- client$call("colnames")
-    return(result)
 
+    return(result)
 }

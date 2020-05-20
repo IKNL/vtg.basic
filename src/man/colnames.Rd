@@ -7,7 +7,7 @@
 colnames(client)
 }
 \arguments{
-\item{client}{Instance of \code{vantage.infrastructure::Client}}
+\item{client}{Instance of \code{vtg::Client}}
 
 \item{expl_vars}{\code{Character} vector of variables to include}
 }

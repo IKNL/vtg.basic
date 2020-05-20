@@ -1,6 +1,6 @@
 #' Return column sums.
 #'
-#' @param client Instance of \code{vantage.infrastructure::Client}
+#' @param client Instance of \code{vtg::Client}
 #' @param expl_vars \code{Character} vector of variables to include
 #'
 #' @return \code{data.frame} with one row for each site.
@@ -9,15 +9,12 @@
 #' @examples
 colSums <- function(client, expl_vars) {
     writeln("Retrieving colSums")
-    image.name <- "harbor.distributedlearning.ai/vantage/vtg.basic:trolltunga"
 
-    client$set.task.image(
-        image.name,
-        task.name="colSums"
-    )
+    image.name <- get.option('image.name')
+    log$debug("Using image: '{image.name}'")
 
+    client$set.task.image(image.name, task.name="colSums")
     sites <- client$call("colSums", expl_vars)
-    return
 
     for (k in 1:length(sites)) {
         if (k == 1) {

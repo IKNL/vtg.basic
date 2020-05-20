@@ -1,18 +1,27 @@
+Vantage-Comment:
+    **************************************************
+    * This file was generated from DESCRIPTION.tpl   *
+    * Please don't modify it directly! Instead,      *
+    * modify DESCRIPTION.tpl and run the following   *
+    * command:                                       *
+    *   make DESCRIPTION                             *
+    **************************************************
 Package: vtg.basic
 Type: Package
-Title: Basic Algorithms for the Vantage6 Infrastructure
 Version: 0.1.0
-Author: 
-    Frank Martin <f.martin@iknl.nl>, 
-    Gijs Geleijnse <g.geleijnse@iknl.nl>, 
+Title: Basic Algorithms for the vantage6 Infrastructure
+Description: This package can be used with the Vantage federated
+    learning infrastructure (see https://github.com/IKNL/vantage6).
+Author:
+    Frank Martin <f.martin@iknl.nl>,
+    Gijs Geleijnse <g.geleijnse@iknl.nl>,
     Melle Sieswerda <m.sieswerda@iknl.nl>
-Maintainer: Melle Sieswerda <m.sieswerda@iknl.nl>
-Description: 
-License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports:
+    glue,
+    dplyr,
     vtg
-Remotes: 
-    mellesies/vtg@trolltunga
-RoxygenNote: 7.0.2
+Remotes:
+    mellesies/vtg
+RoxygenNote: 7.1.0
